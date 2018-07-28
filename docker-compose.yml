@@ -12,12 +12,12 @@ services:
      restart: always
    app:
      restart: always
-     build: .
+     image: java
      working_dir: /app
      volumes:
        - /var/app/:/app
      expose:
-       - "9000"
+         - "9000:8888"
      depends_on:
        - mysql
-     command: gradle clean bootRun
+     command: java -jar /app/app.jar

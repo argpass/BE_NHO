@@ -1,5 +1,5 @@
 FROM pierrevincent/gradle-java8
 
-MAINTAINER qspeng <qspeng@thoughtworks.com>
+MAINTAINER zkchen <zkchen@thoughtworks.com>
 
 WORKDIR /app
