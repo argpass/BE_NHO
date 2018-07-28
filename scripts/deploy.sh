@@ -3,6 +3,6 @@
 echo 'Deploy'
 
 
-sudo cp -f build/libs/*.jar /var/app/
+sudo cp -f build/libs/*.jar /var/app/app.jar
 
 docker-compose up
