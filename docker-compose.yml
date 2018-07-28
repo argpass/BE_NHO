@@ -1,0 +1,23 @@
+version: '2.1'
+services:
+   mysql:
+     container_name: mysql
+     image: mysql/mysql-server:5.7
+     environment:
+       - MYSQL_DATABASE="stu"
+       - MYSQL_ROOT_PASSWORD="root"
+       - MYSQL_ROOT_HOST='%'
+     ports:
+       - "3306:3306"
+     restart: always
+   app:
+     restart: always
+     build: .
+     working_dir: /app
+     volumes:
+       - /var/app/:/app
+     expose:
+       - "9000"
+     depends_on:
+       - mysql
+     command: gradle clean bootRun
