@@ -16,7 +16,7 @@ services:
      working_dir: /app
      volumes:
        - /var/app/:/app
-     expose:
+     ports:
          - "9000:8888"
      depends_on:
        - mysql
