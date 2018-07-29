@@ -5,4 +5,4 @@ echo 'Deploy'
 
 sudo cp -f build/libs/*.jar /var/app/app.jar
 
-docker-compose up
+sudo docker-compose up
